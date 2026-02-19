@@ -8,6 +8,38 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+}
+
 .page {
   display: flex;
   inline-size: 1200px;
@@ -24,7 +56,6 @@ html {
 
 .content {
   display: flex;
-  align-items: flex-start;
   width: 1140px;
   gap: 30px;
 }
@@ -58,8 +89,8 @@ html {
 .search-form__textfield {
   appearance: none;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   color: #fff;
   background-color: transparent;
   padding: 2.5px;
@@ -125,9 +156,6 @@ html {
   flex-direction: column;
   height: 100%;
   flex: 1;
-}
-
-.content__details-title {
   margin-bottom: 16px;
 }
 
@@ -147,10 +175,12 @@ html {
 .content__video-card-description-container {
   flex-grow: 1;
   min-width: 194px;
-  min-height: 103px;
 }
 
 .content__video-card-title {
+  font-family: 'Oswald' sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
@@ -158,6 +188,7 @@ html {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-bottom: 6px;
+  max-width: 196px;
 }
 
 .content__video-card-description {
@@ -172,10 +203,16 @@ html {
 
 }
 
+.result {
+  padding-top: 78px;
+}
+
 .result__video-container {
-  min-height: 456px;
+  display: flex;
+  align-items: flex-end;
+  min-height: 386px;
   min-width: 711px;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -195,20 +232,6 @@ html {
   white-space: nowrap;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
@@ -217,6 +240,7 @@ fieldset {
 }
 
 .title {
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
@@ -260,6 +284,7 @@ fieldset {
 }
 
 .button {
+  font-weight: 700;
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
@@ -297,22 +322,3 @@ fieldset {
   outline-offset: 2px;
 }
 
-
-
-ul,
-ol {
-  list-style: none;
-}
-
-/* Кастомный скроллбар */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
-}
